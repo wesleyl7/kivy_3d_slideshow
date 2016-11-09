@@ -1,0 +1,27 @@
+#:kivy 1.0
+#:import kivy kivy
+#:import Layout_3D main.Layout_3D
+#:import Layout_2D main.Layout_2D
+
+<Layout_2D>:
+    id: Board2D 
+    canvas:
+        Color:
+            rgba: 1, 1, 1, 0.1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+<Layout_3D>:
+    id: par
+    size_hint: (1.0, 1.0)
+    canvas_size: (1366, 768)
+    post_processing: False
+    canvas.before:
+        Color:
+            rgb: 1, 1, 1,0.1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: "./checkerb.png"    
+
